@@ -1,5 +1,5 @@
 {
-  "version": 2,
+  "version": 3,
   "width": 1012,
   "height": 638,
   "cards": [
@@ -15,14 +15,15 @@
       "name": "Chase Freedom Flex",
       "issuer": "Chase",
       "image": "cards/chase-freedom-flex.webp",
-      "source": "https://creditcards.chase.com/content/dam/jpmc-marketplace/card-art/freedom_flex_card.png"
+      "source": "https://creditcards.chase.com/content/dam/jpmc-marketplace/card-art/freedom-flex-card.png"
     },
     {
       "id": "chase-freedom-rise",
       "name": "Chase Freedom Rise",
       "issuer": "Chase",
       "image": "cards/chase-freedom-rise.webp",
-      "source": "https://creditcards.chase.com/content/dam/jpmc-marketplace/card-art/freedom_rise_alt_card2.png"
+      "source": "https://creditcards.chase.com/content/dam/jpmc-marketplace/card-art/freedom_rise_alt_card2.png",
+      "patch": "https://creditcards.chase.com/content/dam/jpmc-marketplace/card-art/freedom-rise-card.png"
     },
     {
       "id": "chase-sapphire-preferred",
@@ -43,21 +44,21 @@
       "name": "Chase Slate Edge",
       "issuer": "Chase",
       "image": "cards/chase-slate-edge.webp",
-      "source": "https://creditcards.chase.com/content/dam/jpmc-marketplace/card-art/slate_edge_card_alt.png"
+      "source": "https://creditcards.chase.com/content/dam/jpmc-marketplace/card-art/slate-edge-card.png"
     },
     {
       "id": "chase-prime-visa",
       "name": "Prime Visa",
       "issuer": "Chase",
       "image": "cards/chase-prime-visa.webp",
-      "source": "https://creditcards.chase.com/content/dam/jpmc-marketplace/card-art/prime-visa.png"
+      "source": "https://creditcards.chase.com/content/dam/jpmc-marketplace/card-art/prime_visa.png"
     },
     {
       "id": "chase-amazon-visa",
       "name": "Amazon Visa",
       "issuer": "Chase",
       "image": "cards/chase-amazon-visa.webp",
-      "source": "https://creditcards.chase.com/content/dam/jpmc-marketplace/card-art/amazon-visa.png"
+      "source": "https://creditcards.chase.com/content/dam/jpmc-marketplace/card-art/amazon_visa.png"
     },
     {
       "id": "chase-united-explorer",
@@ -309,14 +310,14 @@
       "name": "BofA Customized Cash Rewards",
       "issuer": "Bank of America",
       "image": "cards/bofa-customized-cash.webp",
-      "source": "https://www.bankofamerica.com/content/images/ContextualSiteGraphics/CreditCardArt/en_US/Approved_PCM/8ckn_cshsigcm_v_250x158.png"
+      "source": "https://www.bankofamerica.com/content/images/ContextualSiteGraphics/CreditCardArt/en_US/Approved_PCM/8ckn_cshsigcm_v_300x188_promo02.png"
     },
     {
       "id": "bofa-unlimited-cash",
       "name": "BofA Unlimited Cash Rewards",
       "issuer": "Bank of America",
       "image": "cards/bofa-unlimited-cash.webp",
-      "source": "https://www.bankofamerica.com/content/images/ContextualSiteGraphics/CreditCardArt/en_US/Approved_PCM/8cty_cshsigcm_v_250x157.png"
+      "source": "https://www.bankofamerica.com/content/images/ContextualSiteGraphics/CreditCardArt/en_US/Approved_PCM/8cty_cshsigcm_v_300x188_promo02.png"
     },
     {
       "id": "bofa-travel-rewards",

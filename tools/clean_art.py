@@ -7,8 +7,14 @@ import cv2
 import numpy as np
 from PIL import Image, ImageDraw
 
-W, H = 640, 404          # 1.586, the ID-1 card shape, 2x the largest size the app shows
-RADIUS = 26              # ~3.2 mm corner on an 85.6 mm card
+W, H = 1012, 638         # a real card (85.6 x 54 mm, 1.586) at 300 dpi: more than the app ever shows
+K = W / 640              # the cleanup sizes below were tuned at 640 wide
+RADIUS = round(26 * K)   # ~3.2 mm corner
+
+
+def px(n):
+    """A kernel size tuned at 640 wide, scaled and kept odd."""
+    return int(n * K) // 2 * 2 + 1
 
 # Sample cardholder names and numbers printed on the art: (x0, y0, x1, y1) as fractions of the card
 TEXT = {
@@ -90,20 +96,20 @@ def banner_mask(bgr, corner, color, grow=None):
     cv2.fillConvexPoly(m, cv2.convexHull(pts), 255)
     # the banner's thin shadow and the "†" just outside it
     # the banner's drop shadow too: wider on the bigger Amazon banners
-    g = grow or (41 if corner == 'tl' and color[2] < 200 or color == (40, 160, 245) else 15)
+    g = grow or px(41 if corner == 'tl' and color[2] < 200 or color == (40, 160, 245) else 15)
     return cv2.dilate(m, np.ones((g, g), np.uint8))
 
 
 def text_mask(bgr, boxes):
     h, w = bgr.shape[:2]
     gray = cv2.cvtColor(bgr, cv2.COLOR_BGR2GRAY)
-    bg = cv2.medianBlur(gray, 21)
+    bg = cv2.medianBlur(gray, px(21))
     diff = cv2.absdiff(gray, bg)
     m = np.zeros((h, w), np.uint8)
     for x0, y0, x1, y1, *thr in boxes:
         sl = (slice(int(y0 * h), int(y1 * h)), slice(int(x0 * w), int(x1 * w)))
         m[sl] = (diff[sl] > (thr[0] if thr else 14)).astype(np.uint8) * 255
-    return cv2.dilate(m, np.ones((7, 7), np.uint8))
+    return cv2.dilate(m, np.ones((px(7), px(7)), np.uint8))
 
 
 def rounded(im: Image.Image) -> Image.Image:
@@ -120,7 +126,7 @@ def frame(cid, path):
     alpha = np.array(im)[:, :, 3] > 40
     if cid in BANNER:
         bgr = cv2.cvtColor(np.array(im.convert('RGB')), cv2.COLOR_RGB2BGR)
-        alpha &= banner_mask(bgr, *BANNER[cid], grow=9) == 0
+        alpha &= banner_mask(bgr, *BANNER[cid], grow=px(9)) == 0
     # rows and columns that are mostly card: a banner's tip past the edge is too thin to count
     rows = np.where(alpha.mean(axis=1) > 0.35)[0]
     cols = np.where(alpha.mean(axis=0) > 0.35)[0]
@@ -176,7 +182,7 @@ def clean(cid, path):
         region[shape > 0] = chip[shape > 0]
         mask[Y0:Y1, X0:X1][shape > 0] = 0
     if mask.any():
-        bgr = cv2.inpaint(bgr, mask, 9, cv2.INPAINT_TELEA)
+        bgr = cv2.inpaint(bgr, mask, px(9), cv2.INPAINT_TELEA)
     if cid == 'citi-strata':
         bgr = borrow_inverted(bgr, clean('citi-strata-elite', os.path.join(os.path.dirname(path), 'citi-strata-elite.png'))[2])
     return rounded(Image.fromarray(cv2.cvtColor(bgr, cv2.COLOR_BGR2RGB))), mask, bgr
@@ -197,7 +203,7 @@ def borrow_inverted(bgr, elite):
     patch = np.clip(e[..., None] * tone, 0, 255).astype(np.uint8)
     m = np.zeros((H, W), np.float32)
     cv2.rectangle(m, (0, int(H * .81)), (int(W * .43), H), 1, -1)
-    m = cv2.GaussianBlur(m, (21, 21), 0)[..., None]
+    m = cv2.GaussianBlur(m, (px(21), px(21)), 0)[..., None]
     return (bgr * (1 - m) + patch * m).astype(np.uint8)
 
 
@@ -213,12 +219,12 @@ def row_fill(bgr, mask, strip, keep=()):
     tex = np.zeros_like(bgr)
     have = np.zeros(H, bool)
     for y in range(H):
-        px = bgr[y, x0:x1][usable[y, x0:x1]]
-        if len(px) < 12:
+        row = bgr[y, x0:x1][usable[y, x0:x1]]
+        if len(row) < 12:
             continue
-        n = len(px)
+        n = len(row)
         idx = np.arange(W) % (2 * n)
-        tex[y] = px[np.where(idx < n, idx, 2 * n - 1 - idx)]
+        tex[y] = row[np.where(idx < n, idx, 2 * n - 1 - idx)]
         have[y] = True
     ok = np.where(have)[0]
     for y in np.where(~have)[0]:
@@ -230,12 +236,12 @@ def row_fill(bgr, mask, strip, keep=()):
     low = lambda x, sd: cv2.GaussianBlur(x, (0, 0), sd)
     # deep inside a wide hidden area there's little nearby to go on: blend toward a wider look
     shade, cover = None, None
-    for sd in (60, 30, 15):
+    for sd in (60 * K, 30 * K, 15 * K):
         sw = low(w[..., 0], sd)[..., None]
         sh = low(f * w, sd) / np.maximum(sw, 1e-4)
         shade = sh if shade is None else shade * (1 - np.clip(sw * 3, 0, 1)) + sh * np.clip(sw * 3, 0, 1)
-    t = t - low(t, 18) + shade
-    soft = cv2.GaussianBlur((mask > 0).astype(np.float32), (7, 7), 0)[..., None]
+    t = t - low(t, 18 * K) + shade
+    soft = cv2.GaussianBlur((mask > 0).astype(np.float32), (px(7), px(7)), 0)[..., None]
     return np.clip(f * (1 - soft) + t * soft, 0, 255).astype(np.uint8)
 
 

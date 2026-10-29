@@ -6,7 +6,8 @@ usage: py -3.12 -I tools/make_bank_cards.py   (run from the repo root; writes ca
 import json
 from PIL import Image, ImageDraw, ImageFilter, ImageFont
 
-W, H, S = 640, 404, 4          # final size and supersampling
+W, H, S = 640, 404, 4          # layout units (drawn 4x larger, for smooth edges)
+OUT = (1012, 638)              # final size: a real card at 300 dpi
 RADIUS = 26
 FONTS = 'C:/Windows/Fonts/'
 
@@ -66,10 +67,10 @@ def draw(c):
     contactless(d, 142 * S, 178 * S, '#ffffffcc')
     if c['network'] == 'visa':
         d.text((W * S - 40 * S, H * S - 34 * S), 'VISA', font=font('segoeuiz.ttf', 52), fill='white', anchor='rd')
-    out = img.resize((W, H), Image.LANCZOS)
+    out = img.resize(OUT, Image.LANCZOS)
     mask = Image.new('L', (W * S, H * S), 0)
     ImageDraw.Draw(mask).rounded_rectangle((0, 0, W * S - 1, H * S - 1), RADIUS * S, fill=255)
-    out.putalpha(mask.resize((W, H), Image.LANCZOS))
+    out.putalpha(mask.resize(OUT, Image.LANCZOS))
     return out
 
 

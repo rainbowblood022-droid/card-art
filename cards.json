@@ -1,0 +1,350 @@
+{
+  "version": 1,
+  "width": 640,
+  "height": 404,
+  "cards": [
+    {
+      "id": "chase-freedom-unlimited",
+      "name": "Chase Freedom Unlimited",
+      "issuer": "Chase",
+      "image": "cards/chase-freedom-unlimited.webp",
+      "source": "https://creditcards.chase.com/content/dam/jpmc-marketplace/card-art/freedom_unlimited_card_alt.png"
+    },
+    {
+      "id": "chase-freedom-flex",
+      "name": "Chase Freedom Flex",
+      "issuer": "Chase",
+      "image": "cards/chase-freedom-flex.webp",
+      "source": "https://creditcards.chase.com/content/dam/jpmc-marketplace/card-art/freedom_flex_card.png"
+    },
+    {
+      "id": "chase-freedom-rise",
+      "name": "Chase Freedom Rise",
+      "issuer": "Chase",
+      "image": "cards/chase-freedom-rise.webp",
+      "source": "https://creditcards.chase.com/content/dam/jpmc-marketplace/card-art/freedom_rise_alt_card2.png"
+    },
+    {
+      "id": "chase-sapphire-preferred",
+      "name": "Chase Sapphire Preferred",
+      "issuer": "Chase",
+      "image": "cards/chase-sapphire-preferred.webp",
+      "source": "https://creditcards.chase.com/content/dam/jpmc-marketplace/card-art/sapphire-preferredcard2026.png"
+    },
+    {
+      "id": "chase-sapphire-reserve",
+      "name": "Chase Sapphire Reserve",
+      "issuer": "Chase",
+      "image": "cards/chase-sapphire-reserve.webp",
+      "source": "https://creditcards.chase.com/content/dam/jpmc-marketplace/card-art/sapphire_reserve_card_Halo.png"
+    },
+    {
+      "id": "chase-slate-edge",
+      "name": "Chase Slate Edge",
+      "issuer": "Chase",
+      "image": "cards/chase-slate-edge.webp",
+      "source": "https://creditcards.chase.com/content/dam/jpmc-marketplace/card-art/slate_edge_card_alt.png"
+    },
+    {
+      "id": "chase-prime-visa",
+      "name": "Prime Visa",
+      "issuer": "Chase",
+      "image": "cards/chase-prime-visa.webp",
+      "source": "https://creditcards.chase.com/content/dam/jpmc-marketplace/card-art/prime-visa.png"
+    },
+    {
+      "id": "chase-amazon-visa",
+      "name": "Amazon Visa",
+      "issuer": "Chase",
+      "image": "cards/chase-amazon-visa.webp",
+      "source": "https://creditcards.chase.com/content/dam/jpmc-marketplace/card-art/amazon-visa.png"
+    },
+    {
+      "id": "chase-united-explorer",
+      "name": "United Explorer",
+      "issuer": "Chase",
+      "image": "cards/chase-united-explorer.webp",
+      "source": "https://creditcards.chase.com/content/dam/jpmc-marketplace/card-art/united_explorer_new_card.png"
+    },
+    {
+      "id": "chase-swa-priority",
+      "name": "Southwest Priority",
+      "issuer": "Chase",
+      "image": "cards/chase-swa-priority.webp",
+      "source": "https://creditcards.chase.com/content/dam/jpmc-marketplace/card-art/swa_priority_card-2.png"
+    },
+    {
+      "id": "chase-swa-premier",
+      "name": "Southwest Premier",
+      "issuer": "Chase",
+      "image": "cards/chase-swa-premier.webp",
+      "source": "https://creditcards.chase.com/content/dam/jpmc-marketplace/card-art/swa_premier_card.png"
+    },
+    {
+      "id": "chase-swa-plus",
+      "name": "Southwest Plus",
+      "issuer": "Chase",
+      "image": "cards/chase-swa-plus.webp",
+      "source": "https://creditcards.chase.com/content/dam/jpmc-marketplace/card-art/swa_plus_card_New.png"
+    },
+    {
+      "id": "chase-hyatt",
+      "name": "World of Hyatt",
+      "issuer": "Chase",
+      "image": "cards/chase-hyatt.webp",
+      "source": "https://creditcards.chase.com/content/dam/jpmc-marketplace/card-art/world_of_hyatt_card.png"
+    },
+    {
+      "id": "chase-ink-cash",
+      "name": "Ink Business Cash",
+      "issuer": "Chase",
+      "image": "cards/chase-ink-cash.webp",
+      "source": "https://creditcards.chase.com/content/dam/jpmc-marketplace/card-art/ink_cash_card.png"
+    },
+    {
+      "id": "chase-ink-unlimited",
+      "name": "Ink Business Unlimited",
+      "issuer": "Chase",
+      "image": "cards/chase-ink-unlimited.webp",
+      "source": "https://creditcards.chase.com/content/dam/jpmc-marketplace/card-art/ink_unlimited_card.png"
+    },
+    {
+      "id": "chase-ink-preferred",
+      "name": "Ink Business Preferred",
+      "issuer": "Chase",
+      "image": "cards/chase-ink-preferred.webp",
+      "source": "https://creditcards.chase.com/content/dam/jpmc-marketplace/card-art/ink_preferred_card.png"
+    },
+    {
+      "id": "amex-delta-gold",
+      "name": "Delta SkyMiles Gold",
+      "issuer": "American Express",
+      "image": "cards/amex-delta-gold.webp",
+      "source": "https://icm.aexp-static.com/Internet/Acquisition/US_en/AppContent/OneSite/category/cardarts/gold-delta-skymiles.png"
+    },
+    {
+      "id": "amex-hilton",
+      "name": "Hilton Honors",
+      "issuer": "American Express",
+      "image": "cards/amex-hilton.webp",
+      "source": "https://icm.aexp-static.com/Internet/Acquisition/US_en/AppContent/OneSite/category/cardarts/hilton-honors.png"
+    },
+    {
+      "id": "amex-gold",
+      "name": "American Express Gold",
+      "issuer": "American Express",
+      "image": "cards/amex-gold.webp",
+      "source": "https://icm.aexp-static.com/Internet/Acquisition/US_en/AppContent/OneSite/category/cardarts/gold-card.png"
+    },
+    {
+      "id": "amex-platinum",
+      "name": "The Platinum Card",
+      "issuer": "American Express",
+      "image": "cards/amex-platinum.webp",
+      "source": "https://icm.aexp-static.com/Internet/Acquisition/US_en/AppContent/OneSite/category/cardarts/platinum-card.png"
+    },
+    {
+      "id": "amex-green",
+      "name": "American Express Green",
+      "issuer": "American Express",
+      "image": "cards/amex-green.webp",
+      "source": "https://icm.aexp-static.com/Internet/Acquisition/US_en/AppContent/OneSite/category/cardarts/green-card.png"
+    },
+    {
+      "id": "amex-bcp",
+      "name": "Blue Cash Preferred",
+      "issuer": "American Express",
+      "image": "cards/amex-bcp.webp",
+      "source": "https://icm.aexp-static.com/Internet/Acquisition/US_en/AppContent/OneSite/category/cardarts/blue-cash-preferred.png"
+    },
+    {
+      "id": "amex-bce",
+      "name": "Blue Cash Everyday",
+      "issuer": "American Express",
+      "image": "cards/amex-bce.webp",
+      "source": "https://icm.aexp-static.com/Internet/Acquisition/US_en/AppContent/OneSite/category/cardarts/blue-cash-everyday.png"
+    },
+    {
+      "id": "capone-venture-x",
+      "name": "Venture X",
+      "issuer": "Capital One",
+      "image": "cards/capone-venture-x.webp",
+      "source": "https://ecm.capitalone.com/WCM/card/products/venture-x-card-art.png"
+    },
+    {
+      "id": "capone-ventureone",
+      "name": "VentureOne",
+      "issuer": "Capital One",
+      "image": "cards/capone-ventureone.webp",
+      "source": "https://ecm.capitalone.com/WCM/card/products/ventureone_cardart_prim_323x203/mobile.png"
+    },
+    {
+      "id": "capone-venture",
+      "name": "Venture",
+      "issuer": "Capital One",
+      "image": "cards/capone-venture.webp",
+      "source": "https://ecm.capitalone.com/WCM/card/products/venture-card-art.png"
+    },
+    {
+      "id": "capone-quicksilverone",
+      "name": "QuicksilverOne",
+      "issuer": "Capital One",
+      "image": "cards/capone-quicksilverone.webp",
+      "source": "https://ecm.capitalone.com/WCM/card/products/quicksilver_one_cardart.png"
+    },
+    {
+      "id": "capone-quicksilver",
+      "name": "Quicksilver",
+      "issuer": "Capital One",
+      "image": "cards/capone-quicksilver.webp",
+      "source": "https://ecm.capitalone.com/WCM/card/products/quicksilver_cardart.png"
+    },
+    {
+      "id": "capone-savorone",
+      "name": "SavorOne",
+      "issuer": "Capital One",
+      "image": "cards/capone-savorone.webp",
+      "source": "https://ecm.capitalone.com/WCM/card/products/savorone-2025-cardart.png"
+    },
+    {
+      "id": "capone-savor",
+      "name": "Savor",
+      "issuer": "Capital One",
+      "image": "cards/capone-savor.webp",
+      "source": "https://ecm.capitalone.com/WCM/card/products/new-savor-card-art/mobile.png"
+    },
+    {
+      "id": "capone-platinum",
+      "name": "Capital One Platinum",
+      "issuer": "Capital One",
+      "image": "cards/capone-platinum.webp",
+      "source": "https://ecm.capitalone.com/WCM/card/products/plat_cardart_prim_323x203/mobile.png"
+    },
+    {
+      "id": "discover-it",
+      "name": "Discover it",
+      "issuer": "Discover",
+      "image": "cards/discover-it.webp",
+      "source": "https://ecm.capitalone.com/WCM/card/products/sandbox-discover-it/design-discoveritcash-1/mobile.png"
+    },
+    {
+      "id": "citi-double-cash",
+      "name": "Citi Double Cash",
+      "issuer": "Citi",
+      "image": "cards/citi-double-cash.webp",
+      "source": "https://aemapi.citi.com/content/dam/cfs/uspb/usmkt/cards/en/static/images/citi-double-cash-credit-card/citi-double-cash-credit-card_306x192.webp"
+    },
+    {
+      "id": "citi-custom-cash",
+      "name": "Citi Custom Cash",
+      "issuer": "Citi",
+      "image": "cards/citi-custom-cash.webp",
+      "source": "https://aemapi.citi.com/content/dam/cfs/uspb/usmkt/cards/en/static/images/citi-custom-cash-credit-card/citi-custom-cash-credit-card_306x192.webp"
+    },
+    {
+      "id": "citi-strata-elite",
+      "name": "Citi Strata Elite",
+      "issuer": "Citi",
+      "image": "cards/citi-strata-elite.webp",
+      "source": "https://aemapi.citi.com/content/dam/cfs/uspb/usmkt/cards/en/static/images/citi-strata-elite-credit-card/citi-strata-elite-credit-card_306x192.webp"
+    },
+    {
+      "id": "citi-strata",
+      "name": "Citi Strata",
+      "issuer": "Citi",
+      "image": "cards/citi-strata.webp",
+      "source": "https://aemapi.citi.com/content/dam/cfs/uspb/usmkt/cards/en/static/images/citi-strata-credit-card/citi-strata-credit-card_306x192.webp"
+    },
+    {
+      "id": "citi-simplicity",
+      "name": "Citi Simplicity",
+      "issuer": "Citi",
+      "image": "cards/citi-simplicity.webp",
+      "source": "https://aemapi.citi.com/content/dam/cfs/uspb/usmkt/cards/en/static/images/citi-simplicity-credit-card/citi-simplicity-credit-card_306x192.webp"
+    },
+    {
+      "id": "citi-diamond-preferred",
+      "name": "Citi Diamond Preferred",
+      "issuer": "Citi",
+      "image": "cards/citi-diamond-preferred.webp",
+      "source": "https://aemapi.citi.com/content/dam/cfs/uspb/usmkt/cards/en/static/images/citi-diamond-preferred-credit-card/citi-diamond-preferred-credit-card_306x192.webp"
+    },
+    {
+      "id": "citi-aa-platinum",
+      "name": "Citi AAdvantage Platinum Select",
+      "issuer": "Citi",
+      "image": "cards/citi-aa-platinum.webp",
+      "source": "https://aemapi.citi.com/content/dam/cfs/uspb/usmkt/cards/en/static/images/citi-aadvantage-platinum-elite-credit-card/citi-aadvantage-platinum-elite-credit-card_306x192.webp"
+    },
+    {
+      "id": "wf-active-cash",
+      "name": "Wells Fargo Active Cash",
+      "issuer": "Wells Fargo",
+      "image": "cards/wf-active-cash.webp",
+      "source": "https://creditcards.wellsfargo.com/rv/next/images/cards/active-cash.webp"
+    },
+    {
+      "id": "wf-autograph-journey",
+      "name": "Wells Fargo Autograph Journey",
+      "issuer": "Wells Fargo",
+      "image": "cards/wf-autograph-journey.webp",
+      "source": "https://creditcards.wellsfargo.com/rv/next/images/cards/autograph-journey.webp"
+    },
+    {
+      "id": "wf-autograph",
+      "name": "Wells Fargo Autograph",
+      "issuer": "Wells Fargo",
+      "image": "cards/wf-autograph.webp",
+      "source": "https://creditcards.wellsfargo.com/rv/next/images/cards/autograph.webp"
+    },
+    {
+      "id": "wf-reflect",
+      "name": "Wells Fargo Reflect",
+      "issuer": "Wells Fargo",
+      "image": "cards/wf-reflect.webp",
+      "source": "https://creditcards.wellsfargo.com/rv/next/images/cards/reflect.webp"
+    },
+    {
+      "id": "bofa-customized-cash",
+      "name": "BofA Customized Cash Rewards",
+      "issuer": "Bank of America",
+      "image": "cards/bofa-customized-cash.webp",
+      "source": "https://www.bankofamerica.com/content/images/ContextualSiteGraphics/CreditCardArt/en_US/Approved_PCM/8ckn_cshsigcm_v_250x158.png"
+    },
+    {
+      "id": "bofa-unlimited-cash",
+      "name": "BofA Unlimited Cash Rewards",
+      "issuer": "Bank of America",
+      "image": "cards/bofa-unlimited-cash.webp",
+      "source": "https://www.bankofamerica.com/content/images/ContextualSiteGraphics/CreditCardArt/en_US/Approved_PCM/8cty_cshsigcm_v_250x157.png"
+    },
+    {
+      "id": "bofa-travel-rewards",
+      "name": "BofA Travel Rewards",
+      "issuer": "Bank of America",
+      "image": "cards/bofa-travel-rewards.webp",
+      "source": "https://www.bankofamerica.com/content/images/ContextualSiteGraphics/CreditCardArt/en_US/Approved_PCM/8blm_trvsigcm_v_250x158.png"
+    },
+    {
+      "id": "bofa-premium-rewards",
+      "name": "BofA Premium Rewards",
+      "issuer": "Bank of America",
+      "image": "cards/bofa-premium-rewards.webp",
+      "source": "https://www.bankofamerica.com/content/images/ContextualSiteGraphics/CreditCardArt/en_US/Approved_PCM/8CAL_prmsigcm_v_250_158.png"
+    },
+    {
+      "id": "penfed-debit",
+      "name": "PenFed Debit Card",
+      "issuer": "PenFed Credit Union",
+      "image": "cards/penfed-debit.webp",
+      "source": "original"
+    },
+    {
+      "id": "pnc-debit",
+      "name": "PNC Debit Card",
+      "issuer": "PNC Bank",
+      "image": "cards/pnc-debit.webp",
+      "source": "original"
+    }
+  ]
+}

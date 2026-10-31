@@ -30,6 +30,7 @@ Cards drawn here (`source: original`) are a fallback for debit cards with no ima
 py -3.12 -I tools/fetch_sources.py raw                 # issuer originals (and patches)
 py -3.12 -I tools/build.py raw EDSR_x4.pb [id ...]     # crop, enlarge, size to 1012x638, write cards/<id>.webp
 py -3.12 -I tools/from_image.py supplied/<id>.png <id> # a supplied image: crop, see-through corners, 1012x638
+py -3.12 -I tools/align_mark.py <id> [<id> ...]       # then: its VISA/DEBIT mark at the standard place (60 px in, 22.5% wide)
 py -3.12 -I tools/make_bank_cards.py                   # drawn art for debit cards with no image (skips supplied)
 ```
 

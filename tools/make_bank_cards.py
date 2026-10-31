@@ -76,13 +76,15 @@ def draw(c):
 
 def main():
     manifest = json.load(open('cards.json', encoding='utf-8'))
-    known = {m['id'] for m in manifest['cards']}
+    known = {m['id']: m['source'] for m in manifest['cards']}
     for c in CARDS:
+        if known.get(c['id'], 'original') != 'original':
+            continue   # a real image of this card was supplied (from_image.py); the drawing is only a fallback
         draw(c).save(f"cards/{c['id']}.webp", quality=92, method=6)
         if c['id'] not in known:
             manifest['cards'].append({'id': c['id'], 'name': c['name'], 'issuer': c['issuer'], 'image': f"cards/{c['id']}.webp", 'source': 'original'})
     json.dump(manifest, open('cards.json', 'w', encoding='utf-8'), indent=2)
-    print('drew', len(CARDS))
+    print('done')
 
 
 main()

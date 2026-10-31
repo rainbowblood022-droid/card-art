@@ -112,7 +112,7 @@ def main():
     sr.readModel(model)
     sr.setModel('edsr', 4)
     for c in json.load(open('cards.json', encoding='utf-8'))['cards']:
-        if c['source'] == 'original' or (only and c['id'] not in only):
+        if not c['source'].startswith('https://') or (only and c['id'] not in only):
             continue
         Image.fromarray(build(c['id'], os.path.join(raw, c['id'] + '.png'), sr)).save(f"cards/{c['id']}.webp", quality=94, method=6)
         print(c['id'], flush=True)

@@ -1,5 +1,5 @@
 {
-  "version": 3,
+  "version": 4,
   "width": 1012,
   "height": 638,
   "cards": [
@@ -8,7 +8,8 @@
       "name": "Chase Freedom Unlimited",
       "issuer": "Chase",
       "image": "cards/chase-freedom-unlimited.webp",
-      "source": "https://creditcards.chase.com/content/dam/jpmc-marketplace/card-art/freedom_unlimited_card_alt.png"
+      "source": "supplied",
+      "supplied": "supplied/chase-freedom-unlimited.png"
     },
     {
       "id": "chase-freedom-flex",
@@ -338,14 +339,24 @@
       "name": "PenFed Debit Card",
       "issuer": "PenFed Credit Union",
       "image": "cards/penfed-debit.webp",
-      "source": "original"
+      "source": "supplied",
+      "supplied": "supplied/penfed-debit.png"
     },
     {
       "id": "pnc-debit",
-      "name": "PNC Debit Card",
+      "name": "PNC Virtual Wallet Debit Card",
       "issuer": "PNC Bank",
       "image": "cards/pnc-debit.webp",
-      "source": "original"
+      "source": "supplied",
+      "supplied": "supplied/pnc-debit.png"
+    },
+    {
+      "id": "popular-debit",
+      "name": "Popular Debit Card",
+      "issuer": "Banco Popular",
+      "image": "cards/popular-debit.webp",
+      "source": "supplied",
+      "supplied": "supplied/popular-debit.png"
     }
   ]
 }
